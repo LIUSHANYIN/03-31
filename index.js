@@ -14,47 +14,32 @@ function showNav() {
   }
 }
 
-// function handleShow(){
-//     if(window.scrollY>100){
-//         document.getElementById('bar').classList.add('background');
-//         document.getElementById('a1').style.color='black';
-//         document.getElementById('a2').style.color='black';
-//         document.getElementById('a3').style.color='black';
-//         document.getElementById('a4').style.color='black';
-//         document.getElementById('a5').style.color='black';
-//     }
-//     else{
-//         document.getElementById('bar').classList.remove('background');
-//         document.getElementById('a1').style.color="#fafafa54";
-//         document.getElementById('a2').style.color="#fafafa54";
-//         document.getElementById('a3').style.color="#fafafa54";
-//         document.getElementById('a4').style.color="#fafafa54";
-//         document.getElementById('a5').style.color="#fafafa54";
-//     }
-// }
-
 var width = document.body.clientWidth;
 var isWide;
 console.log(width);
-function check() {
-  if (width > 768) {
-    window.onscroll = function() {
-      if (window.scrollY > 100) {
-        document.getElementById("bar").classList.add("background");
-        document.getElementById("a1").style.color = "black";
-        document.getElementById("a2").style.color = "black";
-        document.getElementById("a3").style.color = "black";
-        document.getElementById("a4").style.color = "black";
-        document.getElementById("a5").style.color = "black";
-      } else {
-        document.getElementById("bar").classList.remove("background");
-        document.getElementById("a1").style.color = "#fafafa54";
-        document.getElementById("a2").style.color = "#fafafa54";
-        document.getElementById("a3").style.color = "#fafafa54";
-        document.getElementById("a4").style.color = "#fafafa54";
-        document.getElementById("a5").style.color = "#fafafa54";
-      }
-    };
-  }
+
+if (width > 768) {
+  window.onscroll = function() {
+    if (window.scrollY > 100) {
+      document.getElementById("bar").classList.add("background");
+      document.getElementById("a1").style.color = "black";
+      document.getElementById("a2").style.color = "black";
+      document.getElementById("a3").style.color = "black";
+      document.getElementById("a4").style.color = "black";
+      document.getElementById("a5").style.color = "black";
+    } else {
+      document.getElementById("bar").classList.remove("background");
+      document.getElementById("a1").style.color = "#fafafa54";
+      document.getElementById("a2").style.color = "#fafafa54";
+      document.getElementById("a3").style.color = "#fafafa54";
+      document.getElementById("a4").style.color = "#fafafa54";
+      document.getElementById("a5").style.color = "#fafafa54";
+    }
+  };
+} else {
+  document.getElementById("a1").style.color = "black";
+  document.getElementById("a2").style.color = "black";
+  document.getElementById("a3").style.color = "black";
+  document.getElementById("a4").style.color = "black";
+  document.getElementById("a5").style.color = "black";
 }
-var m = setInterval(check(), 100);
